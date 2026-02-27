@@ -45,6 +45,7 @@ Fournir un générateur de matériel pédagogique clé en main (cartes à décou
 - [x] Lignes de découpe pointillées intégrées autour de chaque carte
 - [x] Icônes sémantiques (lucide-react) dans les guides : `XCircle`, `CheckCircle`, `AlertTriangle`, `Lightbulb`, `Clock`...
 - [x] Numérotation des cartes supprimée sur le matériel imprimé (évite le biais de classement)
+- [x] **Pied de page d'attribution** sur chaque page imprimée : URL de l'outil et nom de l'auteur, collé en bas via une structure flex
 - [x] Navbar MiCetF intégrée avec bouton de don et contact
 
 ### User stories
@@ -126,6 +127,16 @@ Aucun appel réseau, aucune base de données, aucun backend.
 2026-02-27 – Séparation en 3 documents imprimables indépendants (matériel,
              règles, guide) : permet à l'animateur d'imprimer uniquement
              ce dont il a besoin selon le format de sa formation.
+
+2026-02-27 – PrintPage structurée en colonne flex (display:flex + flex-direction:
+             column) avec children dans un div flex:1 : garantit que le pied de
+             page d'attribution est toujours collé en bas de chaque page A4,
+             quelle que soit la densité du contenu.
+
+2026-02-27 – Carte 2 remplacée (horaires déchetterie → calendrier temps forts
+             nationaux) : la nouvelle carte introduit un cas IAG de type
+             "agrégation/synthèse" manquant dans le jeu, plus ancré dans la
+             réalité professionnelle des enseignants du 1er degré.
 ```
 
 ---
@@ -198,6 +209,7 @@ Pour un déploiement à la racine d'un domaine, utiliser `base: "/"`.
 - [ ] `pnpm build` — build sans erreur ni warning critique
 - [ ] Prévisualisation dans Chrome : les 4 pages matériel s'affichent correctement
 - [ ] Impression Chrome (A4, marges zéro, graphiques arrière-plan) : bordures colorées visibles, lignes de découpe présentes, aucune carte coupée entre deux pages
+- [ ] Pied de page d'attribution visible sur toutes les pages imprimées, collé en bas
 - [ ] Mode présentation : navigation ← →, touche Échap fonctionnelle
 - [ ] Mode édition : modification d'un texte de carte, vérification dans la prévisualisation et à l'impression
 - [ ] Palette N&B : rendu correct à l'impression sans couleur

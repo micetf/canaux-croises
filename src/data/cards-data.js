@@ -38,7 +38,7 @@ export const cards = [
     },
     {
         id: 2,
-        text: "J'ai besoin de connaître les horaires d'ouverture actuels de la déchetterie la plus proche de l'école, y compris les éventuelles fermetures exceptionnelles de cette semaine.",
+        text: "J'ai besoin d'un calendrier annuel des principaux temps forts nationaux (journées et semaines thématiques) qui reviennent chaque année et concernent l'école primaire.",
     },
     {
         id: 3,
@@ -162,7 +162,7 @@ export const pedagogicalInfo = {
         "Phase 2 : le silence est ESSENTIEL pour que chacun se positionne sans influence",
         "Phase 3 : ne pas intervenir trop vite, laisser le groupe négocier",
         "Valoriser la création de la zone COMBINAISON (= découverte clé de l'activité)",
-        "Les cartes 1, 9 et 11 font toujours débat (c'est normal et souhaitable)",
+        "Les cartes 1, 2, 9 et 11 font toujours débat (c'est normal et souhaitable)",
         "Il n'y a pas de 'bonne réponse' unique (c'est tout l'intérêt de l'activité)",
         "Phase 6 : la création de cartes personnelles ancre les apprentissages (transfert récepteur => producteur)",
     ],
@@ -217,7 +217,7 @@ export const pedagogicalInfo = {
         },
     ],
 
-    // NOUVEAUTÉ : Attendus détaillés par carte
+    // Attendus détaillés par carte
     expectedAnswers: [
         {
             card: 1,
@@ -241,19 +241,27 @@ export const pedagogicalInfo = {
         },
         {
             card: 2,
-            text: "Horaires d'ouverture actuels de la déchetterie",
-            mainChannel: "Moteur de recherche",
-            alternatives: [],
-            rationale:
-                "Information factuelle, locale, actualisée régulièrement. Le moteur de recherche est le canal le plus direct et fiable.",
-            criteria: [
-                "Actualité de l'information",
-                "Information factuelle",
-                "Besoin de rapidité",
+            text: "Calendrier annuel des principaux temps forts nationaux concernant l'école primaire",
+            mainChannel: "IAG (avec validation)",
+            alternatives: [
+                "Moteur de recherche (compilation manuelle)",
+                "Pairs",
             ],
-            commonMistakes: ["Aucune - carte consensuelle"],
+            rationale:
+                "Ce document de synthèse n'existe pas tel quel : il faut collecter des informations dispersées sur plusieurs pages eduscol/education.gouv.fr, analyser leur récurrence annuelle, puis construire le calendrier. L'IAG excelle dans cette agrégation multi-sources et cette mise en forme — là où un moteur de recherche retourne des liens sans synthétiser.",
+            criteria: [
+                "Agrégation de sources dispersées",
+                "Analyse de récurrence",
+                "Production d'un document structuré inexistant",
+                "Validation indispensable (risque d'omissions ou d'erreurs de dates)",
+            ],
+            commonMistakes: [
+                "Croire qu'un moteur de recherche suffit : il liste des pages, il ne construit pas de calendrier",
+                "Ne pas vérifier le résultat de l'IAG : elle peut oublier des temps forts ou halluciner des dates",
+                "Ne pas préciser dans le prompt de sourcer sur eduscol pour fiabiliser la réponse",
+            ],
             nuances:
-                "Carte consensuelle : claire et sans ambiguïté. Utile pour valider la compréhension de la démarche.",
+                "Carte débattable : le Moteur est une vraie alternative si l'enseignant accepte de compiler manuellement. Des collègues CPC ou ERUN ont souvent déjà ce document (Pairs). L'IAG est le canal le plus efficace pour la production du document, pas forcément le plus fiable sans relecture.",
         },
         {
             card: 3,
@@ -443,7 +451,7 @@ export const pedagogicalInfo = {
         },
     ],
 
-    // NOUVEAUTÉ : Critères de décision à faire émerger
+    // Critères de décision à faire émerger
     decisionCriteria: {
         title: "Critères de décision à faire émerger",
         description: "Faire verbaliser ces critères par les participants.",
@@ -469,14 +477,14 @@ export const pedagogicalInfo = {
                 favors: ["Bibliothèque", "Pairs"],
             },
             {
-                name: "Génération",
-                question: "Produire du contenu ?",
+                name: "Génération / Synthèse",
+                question: "Produire ou agréger du contenu ?",
                 favors: ["IAG"],
             },
         ],
     },
 
-    // NOUVEAUTÉ : Erreurs fréquentes à anticiper
+    // Erreurs fréquentes à anticiper
     commonPitfalls: [
         {
             mistake: "Considérer l'IAG comme une source de vérité absolue",
@@ -503,9 +511,22 @@ export const pedagogicalInfo = {
             correction:
                 "L'IAG peut générer, les Pairs valident, le Moteur vérifie, la Bibliothèque enrichit : ils sont complémentaires.",
         },
+        {
+            mistake:
+                "Confondre 'trouver une information' et 'construire un document de synthèse'",
+            correction:
+                "Un moteur de recherche localise des pages existantes. Quand le document voulu n'existe pas encore, l'IAG devient le canal le plus pertinent pour l'agréger et le produire.",
+        },
     ],
 
     expectedDebates: [
+        {
+            card: 2,
+            question:
+                "Calendrier des temps forts : Moteur de recherche pour accéder aux pages officielles, ou IAG pour agréger et synthétiser ce qui est dispersé ?",
+            keyPoint:
+                "Faire distinguer deux tâches : trouver une information existante (Moteur) vs construire un document qui n'existe pas encore (IAG). La validation reste indispensable dans les deux cas.",
+        },
         {
             card: 1,
             question:
@@ -529,13 +550,14 @@ export const pedagogicalInfo = {
         },
     ],
 
-    // NOUVEAUTÉ : Synthèse à partager en fin d'activité
+    // Synthèse à partager en fin d'activité
     keySynthesis: {
         title: "Messages clés à faire émerger",
         points: [
             "Il n'y a pas de 'bon' canal universel : tout dépend du besoin et du contexte",
             "Les canaux sont complémentaires, pas concurrents : on peut (et doit) les combiner",
-            "L'IAG est un outil puissant pour GÉNÉRER, mais nécessite toujours une VALIDATION humaine",
+            "L'IAG est un outil puissant pour GÉNÉRER et SYNTHÉTISER, mais nécessite toujours une VALIDATION humaine",
+            "Distinguer 'trouver une information existante' (Moteur) et 'construire un document qui n'existe pas encore' (IAG) est une compétence informationnelle clé",
             "Le contexte local et l'expérience vécue sont des dimensions que seuls les Pairs peuvent apporter",
             "Les sources officielles et les experts (bibliothécaires) gardent une valeur irremplaçable",
             "La réflexivité sur nos choix de sources est un enjeu professionnel : nous formons les élèves à cette compétence",
