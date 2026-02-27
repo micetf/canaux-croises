@@ -1,0 +1,79 @@
+/*
+ * print.css -- regles d'impression pour Canaux croises
+ *
+ * Objectif : le PDF genere via Ctrl+P dans Chrome soit
+ * visuellement fidele a la version PDFKit.
+ *
+ * A importer dans main.jsx apres index.css :
+ *   import './styles/print.css'
+ */
+
+@media print {
+    /* --- Format de page ---------------------------------------- */
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    /* --- Reset corps ------------------------------------------- */
+    body {
+        margin: 0;
+        padding: 0;
+        background: white !important;
+
+        /*
+         * CRITIQUE : force les navigateurs a imprimer les couleurs
+         * de fond et les bordures colorees.
+         * Sans cette propriete, Chrome supprime les couleurs d'accent
+         * a l'impression.
+         */
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        /* color-adjust: exact !important; */
+    }
+
+    /* --- Espacements ecran supprimes a l'impression ------------ */
+    .py-8,
+    .space-y-8 > * + * {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    /* --- Pages A4 ---------------------------------------------- */
+
+    /*
+     * Chaque PrintPage devient exactement une page imprimee.
+     * On supprime l'ombre et on s'assure que la largeur est 210mm.
+     */
+    .bg-white.shadow-lg.mx-auto {
+        box-shadow: none !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        min-height: 297mm !important;
+        page-break-after: always;
+        break-after: page;
+    }
+
+    /* --- Cartes ------------------------------------------------- */
+
+    /*
+     * Une carte ne doit jamais etre coupee entre deux pages.
+     * Filet de securite en complement de print:break-inside-avoid
+     * sur CardShell.
+     */
+    [style*="width: 90mm"] {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    /* --- Elements a masquer a l'impression --------------------- */
+
+    /*
+     * Le bouton d'impression (Sprint 5) et tout element
+     * portant la classe no-print disparaissent sur papier.
+     */
+    .no-print {
+        display: none !important;
+    }
+}
