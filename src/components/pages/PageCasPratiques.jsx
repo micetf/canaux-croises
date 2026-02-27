@@ -27,7 +27,7 @@ export function PageCasPratiques({
 
     return (
         <PrintPage
-            title={`Cartes Cas pratiques \u2014 Activit\u00E9 Canaux crois\u00E9s${suffix}`}
+            title={`Cartes Cas pratiques Activité « Canaux croisés »${suffix}`}
             subtitle="Triez ces cartes dans les 4 colonnes selon le canal le plus pertinent"
             noBreak={noBreak}
         >

@@ -13,7 +13,7 @@ const NB_CARTES = 6;
 export function PageCartesVierges({ accentColor }) {
     return (
         <PrintPage
-            title="Cartes a inventer \u2014 Activit\u00E9 Canaux crois\u00E9s"
+            title="Cartes à inventer - Activité « Canaux croisés »"
             subtitle="Choisissez secretement un canal, redigez un cas pratique, rabattez la zone canal, faites deviner les autres !"
             noBreak
         >

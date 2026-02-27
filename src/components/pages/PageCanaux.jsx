@@ -12,7 +12,7 @@ import { CardGrid } from "./CardGrid";
 export function PageCanaux({ accentColor }) {
     return (
         <PrintPage
-            title={`Canaux d'information \u2014 Activit\u00E9 Canaux crois\u00E9s`}
+            title={`Canaux d'information Activité « Canaux croisés »`}
             subtitle="Decoupez ces 4 cartes pour materialiser les colonnes de tri"
         >
             <CardGrid>
