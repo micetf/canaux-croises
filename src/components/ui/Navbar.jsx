@@ -121,7 +121,7 @@ export function Navbar({ toolName = "Canaux croises" }) {
                                     title="Pour contacter le webmaster..."
                                     onClick={() =>
                                         (window.location.href =
-                                            "https://micetf.fr/contact")
+                                            "mailto:webmaster@micetf.fr?subject=À propos de /canaux-croises")
                                     }
                                 >
                                     <svg
