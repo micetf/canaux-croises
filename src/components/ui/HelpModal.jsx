@@ -30,6 +30,11 @@ import {
  */
 export function HelpModal({ onClose }) {
     const onCloseRef = useRef(onClose);
+    const panelRef = useRef(null);
+    useEffect(() => {
+        panelRef.current?.focus();
+    }, []);
+
     useEffect(() => {
         onCloseRef.current = onClose;
     }, [onClose]);
@@ -52,13 +57,21 @@ export function HelpModal({ onClose }) {
         >
             {/* Panneau central -- stoppe la propagation du clic */}
             <div
+                ref={panelRef}
+                tabIndex={-1}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="help-modal-title"
                 className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* En-tete */}
                 <div className="flex items-center justify-between px-6 py-4 bg-gray-800 text-white rounded-t-2xl">
                     <div>
-                        <h2 className="font-bold text-lg leading-tight">
+                        <h2
+                            id="help-modal-title"
+                            className="font-bold text-lg leading-tight"
+                        >
                             Canaux croisés
                         </h2>
                         <p className="text-gray-300 text-sm">

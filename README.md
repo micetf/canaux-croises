@@ -227,6 +227,8 @@ Pour un déploiement à la racine d'un domaine, utiliser `base: "/"`.
 - [ ] Mode édition : modification d'un texte de carte, vérification dans la prévisualisation et à l'impression
 - [ ] Palette N&B : rendu correct à l'impression sans couleur
 - [ ] Palette accessible : vérification du contraste des bordures
+- [ ] Modal d'aide : fermeture Echap, focus automatique, annonce lecteur d'écran
+- [ ] Mode présentation : role=dialog, focus automatique à l'ouverture
 
 ### Outillage à envisager (roadmap tests)
 

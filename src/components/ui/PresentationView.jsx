@@ -38,6 +38,11 @@ export function PresentationView({ palette, cardTexts = {}, onExit }) {
         onExitRef.current = onExit;
     }, [onExit]);
 
+    const panelRef = useRef(null);
+    useEffect(() => {
+        panelRef.current?.focus();
+    }, []);
+
     /*
      * Raccourcis clavier.
      * setIndex est stable (garantie React), total est une constante --
@@ -54,12 +59,21 @@ export function PresentationView({ palette, cardTexts = {}, onExit }) {
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
-        <div className="no-print fixed inset-0 bg-gray-950 flex flex-col pt-20 z-40">
+        <div
+            ref={panelRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="presentation-title"
+            className="no-print fixed inset-0 bg-gray-950 flex flex-col pt-20 z-40"
+        >
             {/* -- En-tete -------------------------------------------------- */}
             <div className="flex items-center justify-between px-6 py-3 border-b border-gray-800">
                 <div className="flex items-center gap-2 text-gray-400">
                     <ClipboardList size={16} />
-                    <span className="text-sm font-medium">
+                    <span
+                        id="presentation-title"
+                        className="text-sm font-medium"
+                    >
                         Mode presentation
                     </span>
                 </div>

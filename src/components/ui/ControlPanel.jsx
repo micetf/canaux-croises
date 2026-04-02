@@ -300,6 +300,11 @@ function Toggle({ checked, onChange }) {
         <button
             role="switch"
             aria-checked={checked}
+            aria-label={
+                checked
+                    ? "Désactiver le mode édition"
+                    : "Activer le mode édition"
+            }
             onClick={() => onChange(!checked)}
             className="relative inline-flex h-6 w-11 items-center rounded-full
                        transition-colors duration-200 focus:outline-none shrink-0"
