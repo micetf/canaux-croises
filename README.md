@@ -47,6 +47,9 @@ Fournir un générateur de matériel pédagogique clé en main (cartes à décou
 - [x] Numérotation des cartes supprimée sur le matériel imprimé (évite le biais de classement)
 - [x] **Pied de page d'attribution** sur chaque page imprimée : URL de l'outil et nom de l'auteur, collé en bas via une structure flex
 - [x] Navbar MiCetF intégrée avec bouton de don et contact
+- [x] **Modal d'aide contextuelle** accessible depuis la Navbar :
+      objectif de l'activité, déroulement en 6 phases, documents disponibles,
+      fonctionnalités de l'interface, réglages PDF
 
 ### User stories
 
@@ -137,6 +140,16 @@ Aucun appel réseau, aucune base de données, aucun backend.
              nationaux) : la nouvelle carte introduit un cas IAG de type
              "agrégation/synthèse" manquant dans le jeu, plus ancré dans la
              réalité professionnelle des enseignants du 1er degré.
+
+2026-04-02 – HelpModal.jsx introduit comme composant autonome déclenché
+             depuis la Navbar. Pattern onCloseRef réutilisé pour stabiliser
+             le listener Echap. Rendu hors du flux <nav> pour éviter les
+             conflits z-index / overflow.
+
+2026-04-02 – Dual licence adoptée : MIT pour le code, CC-BY-SA 4.0 pour
+             les contenus pédagogiques (cards-data.js et documents). Fichier
+             LICENSE créé à la racine conformément aux exigences de la Forge
+             des communs numériques éducatifs.
 ```
 
 ---
@@ -146,7 +159,7 @@ Aucun appel réseau, aucune base de données, aucun backend.
 ### Prérequis
 
 - Node.js ≥ 18
-- pnpm ≥ 8 (`npm install -g pnpm`)
+- pnpm ≥ 10 (version testée : 10.32.1) — `npm install -g pnpm`
 
 ### Commandes
 
@@ -240,33 +253,30 @@ Interface de création de cartes personnalisées avec export/import JSON, permet
 
 ## 📄 Licence
 
-Ce projet est distribué sous licence **MIT**.
+### Code source
 
-```
-MIT License
+Le code source de cette application est distribué sous licence **MIT**.
+Voir le fichier [`LICENSE`](./LICENSE) à la racine du dépôt.
 
-Copyright (c) 2026 MiCetF
+### Contenus pédagogiques
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Les contenus pédagogiques de ce dépôt — cartes cas pratiques, phases
+de l'activité, guide animateur, attendus par carte (`src/data/cards-data.js`
+et documents associés) — sont publiés sous licence
+**Creative Commons Attribution – Partage dans les Mêmes Conditions 4.0
+International ([CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr))**.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Vous êtes libre de les utiliser, les adapter et les redistribuer, y compris
+dans un cadre commercial, à condition de citer l'auteur et de redistribuer
+sous la même licence.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+### Statut du projet
 
----
+Cet outil est développé à titre personnel par Frédéric Misery, CPC Numérique,
+en dehors de ses missions de service. Il est mis à disposition gratuitement
+de la communauté éducative via [MiCetF](https://micetf.fr). Un bouton de don
+(PayPal) est présent dans l'interface pour soutenir ce développement personnel ;
+son usage est entièrement facultatif.
 
 ## 🤝 Contributions
 
