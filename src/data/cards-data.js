@@ -88,20 +88,21 @@ export const cards = [
 export const pedagogicalInfo = {
     title: "Guide d'utilisation - Activité 'Canaux croisés'",
     gameTitle: "Canaux croisés - Débattre pour mieux choisir",
-    duration: "30-35 minutes (ou 45-50 min avec Phase 6 créative)",
+    duration:
+        "30 min (phases 1 à 4) — optionnel : +5 min mise en commun, +15 min création",
     objective:
         "Réfléchir au choix du canal d'information selon le besoin professionnel. Identifier les critères de décision (rapidité, fiabilité, contexte...). Découvrir la complémentarité des canaux.",
 
     // FORMAT PRINCIPAL : Table de tri collaborative
     mainFormat: {
         name: "Table de tri collaborative",
-        groupSize: "4-5 participants par table",
-        duration: "30-35 minutes",
+        groupSize: "4 à 6 participants par table",
+        duration: "30 minutes",
     },
 
     materials: [
         "1 jeu de 4 cartes CANAUX (page 1) - COMMUN au groupe",
-        "1 jeu de 12 cartes CAS PRATIQUES (pages 2-3) - PAR PARTICIPANT",
+        "1 jeu de 12 cartes CAS PRATIQUES (pages 2-3) - PAR GROUPE",
         "1 table par groupe",
         "Optionnel : smartphone pour photo finale",
         "Pour Phase 6 : fiches vierges ou post-its (1 par participant)",
@@ -112,17 +113,17 @@ export const pedagogicalInfo = {
             name: "Phase 1 - Installation",
             duration: "2 minutes",
             description:
-                "Placer les 4 cartes CANAUX au centre de la table. Chacun garde son jeu de 12 cartes CAS PRATIQUES.",
+                "Placer les 4 cartes CANAUX au centre de la table en colonnes. Disposer le jeu de 12 cartes CAS PRATIQUES et les cartes vierges à portée du groupe.",
             animatorRole:
-                "Préciser : 'Vous avez chacun votre jeu. C'est normal de placer la même carte différemment.'",
+                "Préciser : 'Votre groupe dispose d'un seul jeu commun. Vous allez le placer ensemble, rapidement, sans débattre dans un premier temps.'",
         },
         {
-            name: "Phase 2 - Tri silencieux",
+            name: "Phase 2 - Tri collectif initial",
             duration: "5 minutes",
             description:
-                "Placer ses 12 cartes sous les canaux choisis, EN SILENCE. Observer ensuite les différences de placement.",
+                "Le groupe place rapidement et sans débattre les 12 cartes CAS PRATIQUES sous les canaux qui semblent les plus appropriés. Premier classement intuitif collectif.",
             animatorRole:
-                "Faire respecter le silence. À la fin : 'Observez où les autres ont placé les cartes.'",
+                "Encourager la rapidité et l'intuition : 'Placez les cartes selon votre première impression collective. Vous débattrez ensuite.' À la fin : 'Observez l'ensemble du classement réalisé.'",
         },
         {
             name: "Phase 3 - Débat",
@@ -130,7 +131,7 @@ export const pedagogicalInfo = {
             description:
                 "Pour chaque carte placée différemment : expliquer son choix, écouter les autres, décider ensemble. On peut créer une zone COMBINAISON si besoin.",
             animatorRole:
-                "Lancer : 'La carte 1 est sous 3 canaux différents. Pourquoi ?' Valoriser la zone COMBINAISON.",
+                "Lancer : 'Y a-t-il des cartes sur lesquelles vous n'êtes pas d'accord ? Pourquoi ?' Valoriser la zone COMBINAISON.",
         },
         {
             name: "Phase 4 - Synthèse",
@@ -159,10 +160,10 @@ export const pedagogicalInfo = {
     ],
 
     tips: [
-        "Phase 2 : le silence est ESSENTIEL pour que chacun se positionne sans influence",
+        "Phase 2 : encourager la rapidité et l'intuition collective — le débat viendra ensuite",
         "Phase 3 : ne pas intervenir trop vite, laisser le groupe négocier",
         "Valoriser la création de la zone COMBINAISON (= découverte clé de l'activité)",
-        "Les cartes 1, 2, 9 et 11 font toujours débat (c'est normal et souhaitable)",
+        "Les cartes sur la fiche d'exercices multiplicatifs, le calendrier des temps forts, le courriel RGPD et le discours parents font toujours débat (c'est normal et souhaitable)",
         "Il n'y a pas de 'bonne réponse' unique (c'est tout l'intérêt de l'activité)",
         "Phase 6 : la création de cartes personnelles ancre les apprentissages (transfert récepteur => producteur)",
     ],
