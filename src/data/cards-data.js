@@ -46,7 +46,7 @@ export const cards = [
     },
     {
         id: 4,
-        text: "Je cherche un roman de littérature jeunesse pour des CE2 qui aborde le thème du déménagement et du changement d'école, avec une écriture accessible.",
+        text: "J'ai besoin d'un roman de littérature jeunesse pour des CE2 qui aborde le thème du déménagement et du changement d'école, avec une écriture accessible.",
     },
     {
         id: 5,
@@ -54,7 +54,7 @@ export const cards = [
     },
     {
         id: 6,
-        text: "Je prépare un conseil d'école et j'ai besoin des statistiques officielles de réussite au DNB pour l'année en cours, au niveau national.",
+        text: "Je prépare un conseil d'école. J'ai besoin des statistiques officielles de réussite au DNB pour l'année en cours, au niveau national.",
     },
     {
         id: 7,
