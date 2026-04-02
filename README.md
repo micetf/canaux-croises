@@ -1,33 +1,73 @@
 # Canaux croisés — Débattre pour mieux choisir
 
-Application web de génération de matériel pédagogique pour l'activité **Canaux croisés**, destinée aux formateurs et CPC Numérique animant des formations d'enseignants du 1er degré sur la pertinence des usages de l'IA générative.
+Application web de génération de matériel pédagogique pour l'activité
+**Canaux croisés**, destinée aux formateurs et CPC Numérique animant des
+formations d'enseignants du 1er degré sur la pertinence des usages de
+l'IA générative et le choix des sources d'information professionnelles.
+
+Fait partie de [MiCetF](https://micetf.fr), une collection d'outils
+numériques éducatifs gratuits et libres.
 
 ---
 
-## 🎯 Objectifs et publics
+## 🎯 L'activité pédagogique
+
+### Principe
+
+Par groupes de 4 à 6, les participants trient des **cartes cas pratiques**
+(12 besoins professionnels d'enseignant formulés en *« J'ai besoin de… »*)
+sous quatre colonnes représentant des canaux d'information :
+
+| Canal | Exemples |
+|---|---|
+| 🤖 IAG | ChatGPT, Gemini, Le Chat (Mistral)… |
+| 🔍 Moteur de recherche | Google, Qwant, DuckDuckGo… |
+| 📚 Bibliothèque / Médiathèque | Bibliothécaires, catalogues, collections… |
+| 👥 Pairs | Collègues, CPC, ERUN, groupes de travail… |
+
+Les désaccords de placement déclenchent des **débats sur les critères de
+choix** (rapidité, fiabilité, contexte local, expertise humaine…). Il n'y
+a pas de bonne réponse unique — c'est tout l'intérêt de l'activité.
+
+### Déroulement (30 min, extensible à 50 min)
+
+| Phase | Durée | Description |
+|---|---|---|
+| 1 — Installation | 2 min | Placer les 4 cartes CANAUX en colonnes au centre de la table |
+| 2 — Tri collectif initial | 5 min | Le groupe place les 12 cartes rapidement, sans débattre |
+| 3 — Débat | 15 min | Discuter les placements, créer une zone COMBINAISON si besoin |
+| 4 — Synthèse | 8 min | Photographier, lister les critères émergés |
+| 5 — Mise en commun *(opt.)* | +5 min | Chaque groupe présente ses 3 cartes les plus débattues |
+| 6 — Création *(opt.)* | +15 min | Inventer de nouvelles cartes depuis sa pratique réelle |
 
 ### Publics visés
 
-- **Public principal** : Conseillers Pédagogiques de Circonscription (CPC), formateurs EAFC, référents numériques du 1er degré
-- **Public secondaire** : Enseignants du cycle 2 et du cycle 3 souhaitant animer l'activité en autonomie
-- **Participants** : Enseignants des cycles 1 à 3 en formation initiale ou continue
+- **Public principal** : Conseillers Pédagogiques de Circonscription (CPC),
+  formateurs EAFC, référents numériques du 1er degré
+- **Public secondaire** : Enseignants du cycle 2 et du cycle 3 souhaitant
+  animer l'activité en autonomie
+- **Participants** : Enseignants des cycles 1 à 3 en formation initiale ou
+  continue
 
-### Objectif principal
+### Contexte d'usage
 
-Fournir un générateur de matériel pédagogique clé en main (cartes à découper, règles, guide animateur) pour l'activité de tri collaboratif **Canaux croisés**, qui amène les enseignants à débattre du canal d'information le plus pertinent selon le besoin professionnel.
-
-### Contexte pédagogique d'usage
-
-- **Formation présentielle** : salle de formation, tables en îlots de 4 à 5 participants
-- **Dispositif** : 30 à 50 minutes, selon variante choisie (tri express, World Café, jeu du déplacement)
-- **Animateur** : imprime le matériel à l'avance depuis n'importe quel navigateur, sur son propre poste
-- **Vidéoprojecteur** : mode présentation intégré pour la phase de mise en commun
+- **Formation présentielle** : salle de formation, tables en îlots de
+  4 à 6 participants
+- **Dispositif** : 30 à 50 minutes, selon variante choisie (tri collectif,
+  World Café, jeu du déplacement)
+- **Animateur** : imprime le matériel à l'avance depuis n'importe quel
+  navigateur, sur son propre poste
+- **Vidéoprojecteur** : mode présentation intégré pour la phase de mise
+  en commun
 
 ### Contraintes
 
-- **Navigateur recommandé** : Chrome ou Chromium (fidélité d'impression maximale)
-- **Aucun compte** : pas d'authentification, pas de stockage distant — l'outil fonctionne entièrement en local
-- **Données personnelles** : aucune donnée collectée, aucun cookie, aucun appel serveur — conformité RGPD native
+- **Navigateur recommandé** : Chrome ou Chromium (fidélité d'impression
+  maximale)
+- **Aucun compte** : pas d'authentification, pas de stockage distant —
+  l'outil fonctionne entièrement en local
+- **Données personnelles** : aucune donnée collectée, aucun cookie,
+  aucun appel serveur — conformité RGPD native
 - **Hors ligne** : utilisable sans connexion une fois la page chargée
 
 ---
@@ -38,30 +78,51 @@ Fournir un générateur de matériel pédagogique clé en main (cartes à décou
     - Matériel (4 pages A4 de cartes à découper)
     - Règles détaillées (4 pages : déroulement, conseils, erreurs, variantes)
     - Guide animateur complet (5+ pages : attendus par carte, messages-clés)
-- [x] **Sélecteur granulaire** de pages à imprimer (case à cocher par page et par document)
-- [x] **3 palettes de couleurs** : standard (rouge/vert/orange), accessible daltoniens rouge-vert (bleu/vert/orange), noir et blanc économique
-- [x] **Mode édition inline** des textes des cartes pour contextualiser l'activité à la réalité de la circonscription
-- [x] **Mode présentation plein écran** sur fond sombre pour vidéoprojecteur, avec navigation clavier (← →, Échap)
-- [x] Lignes de découpe pointillées intégrées autour de chaque carte
-- [x] Icônes sémantiques (lucide-react) dans les guides : `XCircle`, `CheckCircle`, `AlertTriangle`, `Lightbulb`, `Clock`...
-- [x] Numérotation des cartes supprimée sur le matériel imprimé (évite le biais de classement)
-- [x] **Pied de page d'attribution** sur chaque page imprimée : URL de l'outil et nom de l'auteur, collé en bas via une structure flex
-- [x] Navbar MiCetF intégrée avec bouton de don et contact
-- [x] **Modal d'aide contextuelle** accessible depuis la Navbar :
-      objectif de l'activité, déroulement en 6 phases, documents disponibles,
+- [x] **Sélecteur granulaire** de pages à imprimer (case à cocher par page
+      et par document)
+- [x] **3 palettes de couleurs** : standard (rouge/vert/orange), accessible
+      daltoniens rouge-vert (bleu/vert/orange), noir et blanc économique
+- [x] **Mode édition inline** des textes des cartes pour contextualiser
+      l'activité à la réalité de la circonscription
+- [x] **Mode présentation plein écran** sur fond sombre pour vidéoprojecteur,
+      avec navigation clavier (← →, Échap)
+- [x] **Modal d'aide contextuelle** accessible depuis la Navbar : objectif
+      de l'activité, déroulement en 6 phases, documents disponibles,
       fonctionnalités de l'interface, réglages PDF
+- [x] Lignes de découpe pointillées intégrées autour de chaque carte
+- [x] Icônes sémantiques (lucide-react) dans les guides : `XCircle`,
+      `CheckCircle`, `AlertTriangle`, `Lightbulb`, `Clock`…
+- [x] Numérotation des cartes supprimée sur le matériel imprimé (évite
+      le biais de classement)
+- [x] **Pied de page d'attribution** sur chaque page imprimée : URL de
+      l'outil et nom de l'auteur, collé en bas via une structure flex
+- [x] Navbar MiCetF intégrée avec bouton de don et contact
 
 ### User stories
 
-**En tant que CPC Numérique**, je peux sélectionner uniquement les pages "Matériel" et imprimer 4 pages A4 de cartes, afin de préparer le matériel pour 6 groupes en moins de 5 minutes.
+**En tant que CPC Numérique**, je peux sélectionner uniquement les pages
+"Matériel" et imprimer 4 pages A4 de cartes, afin de préparer le matériel
+pour 6 groupes en moins de 5 minutes (1 jeu de 12 cartes par groupe).
 
-**En tant que formateur**, je peux activer le mode édition et modifier le texte d'une carte cas pratique (ex. remplacer "DNB" par "évaluation de circonscription"), afin d'ancrer l'activité dans le contexte local de mes participants.
+**En tant que formateur**, je peux activer le mode édition et modifier le
+texte d'une carte cas pratique (ex. remplacer "DNB" par "évaluation de
+circonscription"), afin d'ancrer l'activité dans le contexte local de mes
+participants.
 
-**En tant qu'animateur en salle**, je peux lancer le mode présentation depuis le panneau Paramètres, afin d'afficher les cartes cas pratiques une par une sur le vidéoprojecteur lors de la phase de mise en commun, en naviguant au clavier.
+**En tant qu'animateur en salle**, je peux lancer le mode présentation
+depuis le panneau Paramètres, afin d'afficher les cartes cas pratiques une
+par une sur le vidéoprojecteur lors de la phase de mise en commun, en
+naviguant au clavier.
 
-**En tant que formateur sensible à l'accessibilité**, je peux choisir la palette "Bleu/Vert/Orange" ou "Noir et blanc", afin que le matériel imprimé reste lisible pour des participants daltoniens ou sur une imprimante monochrome.
+**En tant que formateur sensible à l'accessibilité**, je peux choisir la
+palette "Bleu/Vert/Orange" ou "Noir et blanc", afin que le matériel imprimé
+reste lisible pour des participants daltoniens ou sur une imprimante
+monochrome.
 
-**En tant qu'enseignant souhaitant réutiliser l'activité**, je peux imprimer le guide animateur complet en un clic, afin de disposer des attendus détaillés par carte et des nuances pédagogiques sans avoir à les préparer manuellement.
+**En tant qu'enseignant souhaitant réutiliser l'activité**, je peux imprimer
+le guide animateur complet en un clic, afin de disposer des attendus
+détaillés par carte et des nuances pédagogiques sans avoir à les préparer
+manuellement.
 
 ---
 
@@ -69,24 +130,37 @@ Fournir un générateur de matériel pédagogique clé en main (cartes à décou
 
 ### Stack
 
-| Outil                                   | Version | Rôle                                                   |
-| --------------------------------------- | ------- | ------------------------------------------------------ |
-| [React](https://react.dev)              | 19      | UI déclarative et gestion d'état local                 |
-| [Vite](https://vitejs.dev) + SWC        | 7       | Build ultra-rapide, HMR, bundling ESM                  |
-| [Tailwind CSS](https://tailwindcss.com) | v3      | Styles utilitaires, classes `print:` pour l'impression |
-| [lucide-react](https://lucide.dev)      | 0.575   | Icônes SVG cohérentes                                  |
-| [pnpm](https://pnpm.io)                 | ≥ 8     | Gestion des dépendances                                |
-| CSS `@media print`                      | —       | Génération PDF via `window.print()`                    |
+| Outil | Version | Rôle |
+|---|---|---|
+| [React](https://react.dev) | 19 | UI déclarative et gestion d'état local |
+| [Vite](https://vitejs.dev) + SWC | 7 | Build ultra-rapide, HMR, bundling ESM |
+| [Tailwind CSS](https://tailwindcss.com) | v3 | Styles utilitaires, classes `print:` pour l'impression |
+| [lucide-react](https://lucide.dev) | 0.575 | Icônes SVG cohérentes |
+| [Vitest](https://vitest.dev) | — | Tests unitaires des données pédagogiques |
+| [pnpm](https://pnpm.io) | ≥ 10 | Gestion des dépendances |
+| CSS `@media print` | — | Génération PDF via `window.print()` |
 
 ### Choix techniques pertinents
 
-**Pas de bibliothèque PDF.** La génération de PDF repose entièrement sur `window.print()` avec `@media print` et `print-color-adjust: exact`. Cela évite toute dépendance lourde (PDFKit, Puppeteer), fonctionne hors ligne, et délègue le rendu au moteur d'impression du navigateur — plus fiable que du canvas pour du texte et des bordures.
+**Pas de bibliothèque PDF.** La génération de PDF repose entièrement sur
+`window.print()` avec `@media print` et `print-color-adjust: exact`. Cela
+évite toute dépendance lourde (PDFKit, Puppeteer), fonctionne hors ligne,
+et délègue le rendu au moteur d'impression du navigateur — plus fiable que
+du canvas pour du texte et des bordures.
 
-**Tailwind v3 via PostCSS** (et non le plugin `@tailwindcss/vite` de la v4). Le projet utilise `postcss.config.js` + `tailwind.config.js` pour rester sur la branche stable v3, mieux documentée et sans breaking changes.
+**Tailwind v3 via PostCSS** (et non le plugin `@tailwindcss/vite` de la v4).
+Le projet utilise `postcss.config.js` + `tailwind.config.js` pour rester sur
+la branche stable v3, mieux documentée et sans breaking changes.
 
-**État global dans `App.jsx` uniquement.** Le projet n'utilise ni Context ni Zustand : l'état (`docs`, `pages`, `paletteKey`, `editable`, `cardTexts`) est centralisé dans `App.jsx` et descend par props. La faible profondeur de l'arbre et l'absence de mutations asynchrones rendent cette approche suffisante et lisible.
+**État global dans `App.jsx` uniquement.** Le projet n'utilise ni Context ni
+Zustand : l'état (`docs`, `pages`, `paletteKey`, `editable`, `cardTexts`) est
+centralisé dans `App.jsx` et descend par props. La faible profondeur de
+l'arbre et l'absence de mutations asynchrones rendent cette approche
+suffisante et lisible.
 
-**Contenu découplé du code.** Tout le contenu pédagogique (cartes, phases, attendus, variantes) est dans `src/data/cards-data.js`. Modifier l'activité ne nécessite aucune connaissance React.
+**Contenu découplé du code.** Tout le contenu pédagogique (cartes, phases,
+attendus, variantes) est dans `src/data/cards-data.js`. Modifier l'activité
+ne nécessite aucune connaissance React.
 
 ### Flux principal
 
@@ -141,12 +215,16 @@ Aucun appel réseau, aucune base de données, aucun backend.
              "agrégation/synthèse" manquant dans le jeu, plus ancré dans la
              réalité professionnelle des enseignants du 1er degré.
 
+2026-02-27 – Format collectif retenu pour la Phase 2 (1 jeu par groupe, tri
+             collectif initial) : raison pratique — 30 participants nécessiteraient
+             360 cartes avec un format individuel silencieux.
+
 2026-04-02 – HelpModal.jsx introduit comme composant autonome déclenché
              depuis la Navbar. Pattern onCloseRef réutilisé pour stabiliser
              le listener Echap. Rendu hors du flux <nav> pour éviter les
              conflits z-index / overflow.
 
-2026-04-02 – Dual licence adoptée : MIT pour le code, CC-BY-SA 4.0 pour
+2026-04-02 – Double licence adoptée : MIT pour le code, CC-BY-SA 4.0 pour
              les contenus pédagogiques (cards-data.js et documents). Fichier
              LICENSE créé à la racine conformément aux exigences de la Forge
              des communs numériques éducatifs.
@@ -158,14 +236,14 @@ Aucun appel réseau, aucune base de données, aucun backend.
 
 ### Prérequis
 
-- Node.js ≥ 18
+- Node.js ≥ 18 (version testée : 20.19.0)
 - pnpm ≥ 10 (version testée : 10.32.1) — `npm install -g pnpm`
 
 ### Commandes
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/micetf/canaux-croises.git
+git clone https://forge.apps.education.fr/micetf/canaux-croises.git
 cd canaux-croises
 
 # Installer les dépendances
@@ -173,6 +251,9 @@ pnpm install
 
 # Démarrer le serveur de développement
 pnpm dev
+
+# Lancer les tests unitaires
+pnpm test
 
 # Builder pour la production
 pnpm build
@@ -189,16 +270,19 @@ pnpm preview
 4. Dans la boîte de dialogue Chrome :
     - Format : **A4**
     - Marges : **Aucune**
-    - ✅ **Graphiques en arrière-plan** (indispensable pour les bordures colorées)
+    - ✅ **Graphiques en arrière-plan** (indispensable pour les bordures
+      colorées)
 5. Enregistrer en PDF ou imprimer directement
 
 ---
 
 ## ⚙️ Configuration
 
-Aucun fichier `.env` n'est requis. L'application ne fait aucun appel réseau et ne dépend d'aucun service externe.
+Aucun fichier `.env` n'est requis. L'application ne fait aucun appel réseau
+et ne dépend d'aucun service externe.
 
-La seule configuration à ajuster pour un déploiement est la propriété `base` dans `vite.config.js` :
+La seule configuration à ajuster pour un déploiement est la propriété `base`
+dans `vite.config.js` :
 
 ```js
 // vite.config.js
@@ -214,42 +298,62 @@ Pour un déploiement à la racine d'un domaine, utiliser `base: "/"`.
 
 ## ✅ Tests
 
-> Le projet ne dispose pas encore de suite de tests automatisés. Les vérifications sont manuelles.
+### Tests unitaires (Vitest)
 
-### Checklist avant mise en production
+```bash
+pnpm test
+```
 
-- [ ] `pnpm lint` — aucune erreur ESLint (notamment règles `react-hooks/exhaustive-deps`)
+Les tests couvrent la cohérence structurelle de `src/data/cards-data.js` :
+nombre de cartes et de canaux, unicité des identifiants, présence des champs
+obligatoires dans les attendus pédagogiques, invariants du modèle (format
+collectif Phase 2, PAR GROUPE).
+
+### Checklist manuelle avant mise en production
+
+- [ ] `pnpm lint` — aucune erreur ESLint (notamment `react-hooks/exhaustive-deps`)
+- [ ] `pnpm test` — tous les tests unitaires passent
 - [ ] `pnpm build` — build sans erreur ni warning critique
 - [ ] Prévisualisation dans Chrome : les 4 pages matériel s'affichent correctement
-- [ ] Impression Chrome (A4, marges zéro, graphiques arrière-plan) : bordures colorées visibles, lignes de découpe présentes, aucune carte coupée entre deux pages
-- [ ] Pied de page d'attribution visible sur toutes les pages imprimées, collé en bas
+- [ ] Impression Chrome (A4, marges zéro, graphiques arrière-plan) : bordures
+      colorées visibles, lignes de découpe présentes, aucune carte coupée
+      entre deux pages
+- [ ] Pied de page d'attribution visible sur toutes les pages imprimées,
+      collé en bas
 - [ ] Mode présentation : navigation ← →, touche Échap fonctionnelle
-- [ ] Mode édition : modification d'un texte de carte, vérification dans la prévisualisation et à l'impression
+- [ ] Modal d'aide : ouverture, fermeture Échap, fermeture clic fond
+- [ ] Mode édition : modification d'un texte de carte, vérification dans
+      la prévisualisation et à l'impression
 - [ ] Palette N&B : rendu correct à l'impression sans couleur
 - [ ] Palette accessible : vérification du contraste des bordures
-- [ ] Modal d'aide : fermeture Echap, focus automatique, annonce lecteur d'écran
-- [ ] Mode présentation : role=dialog, focus automatique à l'ouverture
 
-### Outillage à envisager (roadmap tests)
+### Tests automatisés à envisager (roadmap)
 
-- [Vitest](https://vitest.dev) pour les tests unitaires des fonctions utilitaires
-- [Playwright](https://playwright.dev) pour les tests de rendu impression (PDF snapshot)
+- [Playwright](https://playwright.dev) pour les tests de rendu impression
+  (PDF snapshot)
 
 ---
 
 ## 🗺️ Roadmap
 
 **v1.1 — Persistance légère**
-Sauvegarde des textes modifiés dans `localStorage` pour retrouver ses personnalisations entre deux sessions, sans compte ni serveur.
+Sauvegarde des textes modifiés dans `localStorage` pour retrouver ses
+personnalisations entre deux sessions, sans compte ni serveur.
 
 **v1.2 — Banque de cartes étendue**
-Ajout d'un second jeu de 12 cartes centré sur d'autres situations professionnelles (cycle 1, direction d'école, situations de handicap) — sélectionnable dans les Paramètres.
+Ajout d'un second jeu de 12 cartes centré sur d'autres situations
+professionnelles (cycle 1, direction d'école, situations de handicap)
+— sélectionnable dans les Paramètres.
 
-**v1.3 — Internationalisation partielle**
-Version en langue régionale (occitan, breton, alsacien) pour les formations en académies concernées, via un simple fichier de traduction.
+**v1.3 — Document PDF recto/verso animateur**
+Fiche A4 plastifiable pour l'animation en situation : phases + durées,
+cartes les plus débattues, critères à faire émerger. Disponible en
+téléchargement depuis la modal d'aide.
 
 **v2.0 — Éditeur de cartes persistant**
-Interface de création de cartes personnalisées avec export/import JSON, permettant à chaque formateur de constituer sa propre banque adaptée à son territoire.
+Interface de création de cartes personnalisées avec export/import JSON,
+permettant à chaque formateur de constituer sa propre banque adaptée à
+son territoire.
 
 ---
 
@@ -262,41 +366,53 @@ Voir le fichier [`LICENSE`](./LICENSE) à la racine du dépôt.
 
 ### Contenus pédagogiques
 
-Les contenus pédagogiques de ce dépôt — cartes cas pratiques, phases
-de l'activité, guide animateur, attendus par carte (`src/data/cards-data.js`
-et documents associés) — sont publiés sous licence
-**Creative Commons Attribution – Partage dans les Mêmes Conditions 4.0
-International ([CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr))**.
+Les contenus pédagogiques de ce dépôt — cartes cas pratiques, phases de
+l'activité, guide animateur, attendus par carte (`src/data/cards-data.js`
+et documents associés) — sont publiés sous licence **Creative Commons
+Attribution – Partage dans les Mêmes Conditions 4.0 International
+([CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr))**.
 
 Vous êtes libre de les utiliser, les adapter et les redistribuer, y compris
-dans un cadre commercial, à condition de citer l'auteur et de redistribuer
-sous la même licence.
+dans un cadre commercial, à condition de **citer l'auteur** et de
+**redistribuer sous la même licence**.
 
 ### Statut du projet
 
-Cet outil est développé à titre personnel par Frédéric Misery, CPC Numérique,
-en dehors de ses missions de service. Il est mis à disposition gratuitement
-de la communauté éducative via [MiCetF](https://micetf.fr). Un bouton de don
-(PayPal) est présent dans l'interface pour soutenir ce développement personnel ;
-son usage est entièrement facultatif.
+Cet outil est développé à titre personnel par Frédéric Misery, CPC
+Numérique, en dehors de ses missions de service. Il est mis à disposition
+gratuitement de la communauté éducative via [MiCetF](https://micetf.fr).
+Un bouton de don (PayPal) est présent dans l'interface pour soutenir ce
+développement personnel ; son usage est entièrement facultatif.
+
+---
 
 ## 🤝 Contributions
 
-Le projet est développé sur temps libre par un CPC Numérique. Les contributions externes sont les bienvenues, dans la limite du temps disponible pour les relire.
+Voir [`CONTRIBUTING.md`](./CONTRIBUTING.md) pour le détail complet
+(retours terrain, proposition de cartes, conventions de code).
+
+Les retours d'usage terrain (formations animées, adaptations de contenu,
+impressions sur différentes imprimantes) sont particulièrement précieux
+et **ne nécessitent aucune compétence technique**.
 
 **Pour proposer une amélioration :**
 
-- Ouvrir une [issue GitHub](https://github.com/micetf/canaux-croises/issues) pour décrire le problème ou la suggestion
-- Proposer une Pull Request en partant d'une branche dédiée (`feature/...` ou `fix/...`)
-- Pour un retour rapide ou une question pédagogique, utiliser le [formulaire de contact MiCetF](https://micetf.fr/contact)
-
-Les retours d'usage terrain (formations animées, adaptations de contenu, impressions sur différentes imprimantes) sont particulièrement précieux.
+- Ouvrir un ticket sur la
+  [forge](https://forge.apps.education.fr) ou sur
+  [GitHub](https://github.com/micetf/canaux-croises/issues)
+  pour décrire le problème ou la suggestion
+- Proposer une Merge/Pull Request en partant d'une branche dédiée
+  (`feature/…` ou `fix/…`)
+- Pour un retour rapide ou une question pédagogique :
+  [webmaster@micetf.fr](mailto:webmaster@micetf.fr?subject=%C3%80%20propos%20de%20%2Fcanaux-croises)
 
 ---
 
 ## 👤 Auteur
 
-**Frédéric Misery**
-Développeur des outils [MiCetF](https://micetf.fr)
+**Frédéric Misery** — Développeur des outils [MiCetF](https://micetf.fr)
 
-Contact : [micetf.fr/contact](https://micetf.fr/contact)
+- Site : [micetf.fr](https://micetf.fr)
+- Contact : [webmaster@micetf.fr](mailto:webmaster@micetf.fr?subject=%C3%80%20propos%20de%20%2Fcanaux-croises)
+- Forge : [forge.apps.education.fr](https://forge.apps.education.fr)
+- GitHub : [github.com/micetf](https://github.com/micetf)
